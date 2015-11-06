@@ -12,6 +12,11 @@ classdef edouble
             obj.value = value;
             obj.errorbar = errorbar;
         end
+%         function disp(obj)
+%             sigfigs = ceil(log10(obj.value/obj.errorbar));
+%             printerror = obj.errorbar
+%             s = sprintf('');
+%         end
         function obj = plus(a,b)
             if isa(a,'double')
                 a = edouble(a,0);
