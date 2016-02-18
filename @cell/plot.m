@@ -5,7 +5,7 @@ function hh = plot(varargin)
     if nargin>1 && iscell(args{1}) && iscell(args{2})
         x = args{1};
         y = args{2};
-        for i = 1:numel(x)
+        for i = numel(x):-1:1
             builtin('plot',x{i},y{i},args{3:end}); hold on;
         end
         return
